@@ -1,0 +1,16 @@
+
+[1mFrom:[0m /home/ec2-user/environment/sample_app/rails-sample/test/mailers/user_mailer_test.rb @ line 10 UserMailerTest#test_account_activation:
+
+     [1;34m5[0m: test [31m[1;31m"[0m[31maccount_activation[1;31m"[0m[31m[0m [32mdo[0m
+     [1;34m6[0m:   user = users([33m:michael[0m)
+     [1;34m7[0m:   user.activation_token = [1;34;4mUser[0m.new_token
+     [1;34m8[0m:   mail = [1;34;4mUserMailer[0m.account_activation(user)
+     [1;34m9[0m:   binding.pry
+ => [1;34m10[0m:   assert_equal [31m[1;31m"[0m[31mAccount activation[1;31m"[0m[31m[0m, mail.subject
+    [1;34m11[0m:   assert_equal [user.email], mail.to
+    [1;34m12[0m:   assert_equal [[31m[1;31m"[0m[31mnoreply@example.com[1;31m"[0m[31m[0m], mail.from
+    [1;34m13[0m:   assert_match user.name,               mail.body.encoded
+    [1;34m14[0m:   assert_match user.activation_token,   mail.body.encoded
+    [1;34m15[0m:   assert_match [1;34;4mCGI[0m.escape(user.email),  mail.body.encoded
+    [1;34m16[0m: [32mend[0m
+
